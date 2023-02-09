@@ -1,0 +1,1 @@
+//ticking clock with an ID of clock 
