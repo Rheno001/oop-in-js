@@ -9,20 +9,20 @@ const dishes = [{
 },
 {
     name:"Spaghetti",
-    vegetarian: "false"
-}
+    vegetarian: false
+},
 {
     name: "Steak",
     vegetarian: false
-}{
+},
+{
     name: "Oats",
     vegetarian: true
 }
     
 ];
 
-const vegetarian = dishes.filter(
-    => (dishes.vegetarian);
+let vegetarian = dishes.filter(function(item){
 
-)
+    return item == true; });
 console.log(vegetarian);

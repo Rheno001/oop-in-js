@@ -8,9 +8,12 @@
 </head>
 <body>
     <div id="clock">
-        <span id="second"></span>
-        <span id="minute"></span>
-        <span id="hour"></span>
+        <span id="hour">00</span>
+        <span>:</span>
+        <span id="minute">00</span>
+        <span>:</span>
+        <span id="second">00</span>
+        <span id="session">--AM</span>
     </div>
     
 
@@ -18,21 +21,48 @@
 
 
 <script>
-    const clock =  document.getElementById('#clock');
-    const second = document.getElementById('#second');
-    const minute = document.getElementById('#minute');
-    const hour = document.getElementById('#hour');
+    function displayTime(){
+        var dateTime = new Date();
+        var hours = dateTime.getHours();
+        var minutes =dateTime.getMinutes();
+        var seconds = dateTime.getSeconds();
+        var session = document.getElementById('session');
 
+        if(hours >= 12){
+            session.innerHTML = '--PM';
+        }else{
+            session.innerHTML = 'AM';
+        }
 
-    setInterval(setDate, 1024);
+        document.getElementById('hour').innerHTML = hours;
+        document.getElementById('minute').innerHTML = minutes;
+        document.getElementById('second').innerHTML = seconds;
+        }
+        setInterval(displayTime, 10);
 
-  setDate();
 
 
 </script>
 
 
 <style>
+    body{
+        margin: 0 auto;
+        padding: 80px 0;
+        background: black;
+    }
+    #clock{
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    span{
+        font-size: 50px;
+    }
 
 </style>
 </body>

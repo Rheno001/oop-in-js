@@ -7,18 +7,17 @@ SVGEllipseElement(numSold)
 restock(numCopies)
 use javascript classes and getter method*/
 
-class Book = {
-    constructor('title', 'author', 'isbn', 'copies'){
+class Book {
+    constructor(title, author, isbn, copies) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
         this.copies = copies;
-    }
-   this.available = function(){
-    console.log(this.title, 'available')
-   }
-   this.unAvailable = function()
-
+        if (this.copies <= 10){
+            return 'out of stock';
+        } else {return 'Available';}
+    };
+ 
 }
 
 var Book1 = new Book ('Home alone', 'James Cameron', '1829', '10');

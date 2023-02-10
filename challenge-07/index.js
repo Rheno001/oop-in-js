@@ -8,7 +8,7 @@ const classRoom = {
 function getStudents(classRoom){
     if(hasTeachingAssistant === true){
         return true
-    }else return false;
+    }else{ return false};
     
 
 };

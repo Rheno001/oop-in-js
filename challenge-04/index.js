@@ -2,8 +2,8 @@
 //adding edition
 //the current version of this book is <book edition
 
-class Book = {
-    constructor('title', 'author', 'isbn', 'copies'){
+class Book {
+    constructor(title, author, isbn, copies){
         this.title = title;
         this.author = author;
         this.isbn = isbn;
